@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on darwin)" generated="2024-07-16T16:31:48.123625" rpa="false" schemaversion="5">
+<suite id="s1" name="UI-Automation" source="/Users/neosoft/PycharmProjects/UI-Automation">
+<suite id="s1-s1" name="testCase" source="/Users/neosoft/PycharmProjects/UI-Automation/testCase">
+<suite id="s1-s1-s1" name="PageObjectTest" source="/Users/neosoft/PycharmProjects/UI-Automation/testCase/PageObjectTest.robot">
+<test id="s1-s1-s1-t1" name="Perform allotment successful login operation" line="10">
+<kw name="Launch the browser and open the website" owner="BaseClass">
+<kw name="Launch the browser" owner="BaseClass">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:31:48.400008" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-16T16:31:48.399760" elapsed="2.108213"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${implicitWaitInSeconds}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-07-16T16:31:50.509083" elapsed="0.006387"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:31:48.399018" elapsed="2.118148"/>
+</kw>
+<kw name="open the website" owner="BaseClass">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:31:50.520749" level="INFO">Opening url 'https://ca-stg.marecrew.com/search?searchTerm=&amp;searchEntities=Seafarer'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-16T16:31:50.520521" elapsed="3.323496"/>
+</kw>
+<arg>${webUrl}</arg>
+<status status="PASS" start="2024-07-16T16:31:50.519392" elapsed="3.324773"/>
+</kw>
+<arg>${marecrewUrl}</arg>
+<status status="PASS" start="2024-07-16T16:31:48.398550" elapsed="5.445751"/>
+</kw>
+<kw name="enter valid user credentials" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${userNameTextField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:31:53.847528" elapsed="1.472246"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:31:55.320572" level="INFO">Typing text 'userlevel5' into text field 'id:username'.</msg>
+<arg>${userNameTextField}</arg>
+<arg>userlevel5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:31:55.320071" elapsed="0.141596"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:31:55.462102" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-07-16T16:31:55.502574" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passwordTextField}</arg>
+<arg>Test1234!</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:31:55.461868" elapsed="0.117020"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-16T16:31:55.579648" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T16:31:55.579081" elapsed="3.457741"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:31:53.847194" elapsed="5.189748"/>
+</kw>
+<kw name="validate user login successfully" owner="LandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${avatarIcon}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T16:31:59.037566" elapsed="2.086703"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:31:59.037261" elapsed="2.087223"/>
+</kw>
+<status status="PASS" start="2024-07-16T16:31:48.397779" elapsed="12.727669"/>
+</test>
+<doc>Perform allotment test script execution.</doc>
+<status status="PASS" start="2024-07-16T16:31:48.171130" elapsed="12.955811"/>
+</suite>
+<status status="PASS" start="2024-07-16T16:31:48.170012" elapsed="12.960977"/>
+</suite>
+<status status="PASS" start="2024-07-16T16:31:48.126263" elapsed="13.007611"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="UI-Automation">UI-Automation</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="testCase">UI-Automation.testCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="PageObjectTest">UI-Automation.testCase.PageObjectTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
