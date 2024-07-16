@@ -1,0 +1,3 @@
+Scenario;${userName};${password}
+invalid user name;user5;Test1234!
+invalid password;userlevel5;test1234
